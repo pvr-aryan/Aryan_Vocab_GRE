@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#16211C">
+<title>Wordboard — GRE Vocab Drill</title>
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Wordboard">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <header class="topbar">
+    <div class="scoreLine">
+      <span class="scoreName" id="playerName">Aryan</span>
+      <span class="scoreFraction"><span id="scoreCorrect">0</span>/<span id="scoreTotal">0</span></span>
+    </div>
+    <div class="stat stat-right">
+      <span class="stat-num" id="highScore">0</span>
+      <span class="stat-label">best</span>
+    </div>
+  </header>
+
+  <nav class="levelBar" id="levelBar" aria-label="Word level"></nav>
+
+  <main class="board" id="board">
+
+    <section class="card" id="quizCard">
+      <p class="pos" id="pos">&nbsp;</p>
+      <h1 class="word" id="word">loading&hellip;</h1>
+
+      <div class="options" id="options"></div>
+
+      <div class="reveal" id="reveal" hidden>
+        <p class="revealMeaning" id="revealMeaning"></p>
+        <p class="revealSentence" id="revealSentence"></p>
+        <p class="revealForm" id="revealForm"></p>
+        <button class="nextBtn" id="nextBtn">Next word</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footbar">
+    <button class="ghostBtn" id="resetBtn">Reset progress</button>
+    <span class="footNote" id="wordBankNote"></span>
+  </footer>
+
+</div>
+
+<script src="words.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
